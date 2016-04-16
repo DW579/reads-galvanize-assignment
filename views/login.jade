@@ -1,0 +1,37 @@
+extends layout
+
+block content
+
+  div#header
+    a(href='/')
+      img(id='headerImg' src='galvanize_logo.png')
+    h1#headerText Galvanize Reads
+    div#login
+      a(href="/login")
+        input#loginClick(type="button" value="Login")
+      if currentUser
+        p#welcomeText Hello #{currentUser}! Be wise in your selection...
+        a(href="/logout")
+          input#loginOutClick(type="button" value="Log Out")
+        a(href="/books/#{currentUser}/new")
+          input#createNewBook(type='button' value='Create New Book')
+        a(href="/authors/#{currentUser}/new")
+          input#createNewAuthor(type='button' value='Create New Author')
+
+  a(href='/books')
+    div#sidebarTop
+      img(id='sidebarTopImg' src='books.jpg')
+      h1#sidebarTopText Books
+
+  div#authorsInfo
+    h1#loginTitle Please use the input below to enter in your username. Only 'admin' currently has access to make modifications to the books and authors.
+    form(action="/login" method="post")
+      p
+        input(type='text' name='user_name')
+      p
+        input(type='submit' value='Login')
+
+  a(href='/authors')
+    div#sidebarBottom
+      img(id='sidebarBottomImg' src='author.jpg')
+      h1#sidebarTopText Authors

@@ -1,0 +1,49 @@
+extends ../layout
+
+block content
+
+  div#header
+    a(href='/')
+      img(id='headerImg' src='galvanize_logo.png')
+    h1#headerText Galvanize Reads
+    div#login
+      a(href="/login")
+        input#loginClick(type="button" value="Login")
+      if currentUser
+        p#welcomeText Hello #{currentUser}! Be wise in your selection...
+        a(href="/logout")
+          input#loginOutClick(type="button" value="Log Out")
+        a(href="/books/#{currentUser}/new")
+          input#createNewBook(type='button' value='Create New Book')
+        a(href="/authors/#{currentUser}/new")
+          input#createNewAuthor(type='button' value='Create New Author')
+
+  a(href='/books')
+    div#sidebarTop
+      img(id='sidebarTopImg' src='books.jpg')
+      h1#sidebarTopText Books
+
+  div#authorsInfo
+    for books in allBooks
+      div#authorsPhotoBox
+        a(href='/books/#{books.id}')
+          img(id='authorsPhoto' src= books.url)
+      div#authorsInfoBox
+        a(href='/books/#{books.id}')
+          h1#authorsFirstName= books.title
+            div#removeButton
+              a(href='/books/#{books.id}/#{currentUser}/delete')
+                h6 Remove
+            div#editButton
+              a(href='/books/#{books.id}/#{currentUser}/edit')
+                h6 Edit
+        for author in books.author
+          a(href="/authors/#{author.id}")
+            h3#byAuthor= author.name
+        h3#genreTitle= books.genre
+        p#authorsBio= books.description
+
+  a(href='/authors')
+    div#sidebarBottom
+      img(id='sidebarBottomImg' src='author.jpg')
+      h1#sidebarTopText Authors

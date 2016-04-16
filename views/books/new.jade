@@ -1,0 +1,61 @@
+extends ../layout
+
+block content
+
+  div#header
+    a(href='/')
+      img(id='headerImg' src='../../galvanize_logo.png')
+    h1#headerText Galvanize Reads
+    div#login
+      a(href="/login")
+        input#loginClick(type="button" value="Login")
+      if currentUser
+        p#welcomeText Hello #{currentUser}! Be wise in your selection...
+        a(href="/logout")
+          input#loginOutClick(type="button" value="Log Out")
+        a(href="/books/#{currentUser}/new")
+          input#createNewBook(type='button' value='Create New Book')
+        a(href="/authors/#{currentUser}/new")
+          input#createNewAuthor(type='button' value='Create New Author')
+
+  a(href='/books')
+    div#sidebarTop
+      img(id='sidebarTopImg' src='../../books.jpg')
+      h1#sidebarTopText Books
+
+  div#authorsInfo
+    h1#newTitleBook Fill Out the Form Below to Create a New Book
+    form(action="/books", method="post")
+      div
+        h3 Title
+        input(type="text" name="books_title")
+
+      div
+        h3 Genre
+        input(type="text" name="books_genre")
+
+      div
+        h3 Cover Image URL
+        input(type="url" name="books_url")
+
+      div
+        h3 Description
+        input(type="text" name="books_description")
+
+      div
+        h3 Authors
+        input(type="checkbox" name="textArea")
+
+      div
+        select
+          option First Author
+          option Second Author
+        input(type='button' name='addAuthor' value='Add Author')
+
+      div
+        input(type='submit' name='addBook' value="Add Book")
+
+  a(href='/authors')
+    div#sidebarBottom
+      img(id='sidebarBottomImg' src='../../author.jpg')
+      h1#sidebarTopText Authors

@@ -1,0 +1,29 @@
+extends layout
+
+block content
+
+  div#header
+    a(href='/')
+      img(id='headerImg' src='galvanize_logo.png')
+    h1#headerText Galvanize Reads
+    div#login
+      a(href="/login")
+        input#loginClick(type="button" value="Login")
+      if currentUser
+        p#welcomeText Hello #{currentUser}! Be wise in your selection...
+        a(href="/logout")
+          input#loginOutClick(type="button" value="Log Out")
+        a(href="/books/#{currentUser}/new")
+          input#createNewBook(type='button' value='Create New Book')
+        a(href="/authors/#{currentUser}/new")
+          input#createNewAuthor(type='button' value='Create New Author')
+
+  div#authors
+    a(href='/authors')
+      img(id='innerAuthors' src='author.jpg')
+    h3#titleAuthors Authors
+
+  div#books
+    a(href='/books')
+      img(id='innerBooks' src='books.jpg')
+    h3#titleBooks Books
