@@ -1,0 +1,252 @@
+html {
+  background-color: #272B30;
+}
+
+#header {
+  width: 100%;
+  height: 100px;
+  background-color: #3E444C;
+  border: black solid 1px;
+}
+
+#headerText {
+  color: white;
+  margin-top: 28px;
+}
+
+#headerImg {
+  height: 80px;
+  width: 80px;
+  margin-top: 8px;
+  margin-left: 10px;
+  float: left;
+}
+
+#authors {
+  height: 400px;
+  width: 50%;
+  float: left;
+  margin-top: 20px;
+  border: white solid 1px;
+}
+
+#innerAuthors {
+  height: 360px;
+  width: 100%;
+  border: black solid 1px;
+}
+
+#titleAuthors {
+  margin-top: 10px;
+  margin-left: 37%;
+  color: white;
+}
+
+#books {
+  height: 400px;
+  width: 50%;
+  float: right;
+  margin-top: 20px;
+  border: white solid 1px;
+}
+
+#innerBooks {
+  height: 360px;
+  width: 100%;
+  border: black solid 1px;
+}
+
+#titleBooks {
+  margin-top: 10px;
+  margin-left: 50%;
+  color: white;
+}
+
+#sidebarTop {
+  height: 300px;
+  width: 11%;
+  border: white solid 1px;
+  float: left;
+  margin-top: 20px;
+}
+
+#sidebarTopImg {
+  height: 50px;
+  width: 40%;
+  border: white solid 1px;
+  margin-left: 40px;
+  margin-top: 15px;
+}
+
+#sidebarTopText {
+  margin-top: 80px;
+  -webkit-transform: rotate(-90deg);
+  color: white;
+}
+
+#sidebarBottom {
+  height: 300px;
+  width: 11%;
+  border: white solid 1px;
+  float: left;
+  position: inheit;
+  clear: left;
+  margin-top: 20px;
+}
+
+#sidebarBottomImg {
+  height: 50px;
+  width: 40%;
+  border: white solid 1px;
+  margin-left: 40px;
+  margin-top: 15px;
+}
+
+#authorsInfo {
+  height: 500px;
+  width: 89%;
+  float: right;
+  margin-top: 20px;
+}
+
+#authorsPhotoBox {
+  height: 200px;
+  width: 200px;
+  border: white solid 2px;
+  margin-top: 10px;
+  margin-left: 10px;
+  float: left;
+  clear: left;
+}
+
+#authorsPhoto {
+  height: 100%;
+  width: 100%;
+}
+
+#authorsInfoBox {
+  height: 400px;
+  width: 80%;
+  float: left;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#authorsFirstName {
+  color: white;
+}
+
+#authorsBio {
+  color: #C8C8C8;
+}
+
+#subTitleBooks {
+  color: white;
+}
+
+#writtenBooks {
+  height: 150px;
+  width: 80%;
+  border: white solid 4px;
+}
+
+#listedBooks {
+  color: #C8C8C8;
+}
+
+#editButton {
+  height: 50px;
+  width: 50px;
+  border: white solid 1px;
+  float: right;
+}
+
+#removeButton {
+  height: 50px;
+  width: 50px;
+  border: white solid 1px;
+  float: right;
+}
+
+h3 {
+  color: white;
+}
+
+#genreTitle {
+  color: white;
+}
+
+#byAuthor {
+  color: white;
+}
+
+#deleteAuthorButton {
+  height: 100px;
+  width: 70%;
+}
+
+#deleteBookButton {
+  height: 100px;
+  width: 70%;
+}
+
+#visit {
+  display: inline-block;
+}
+
+#login {
+  height: 50px;
+  width: 60%;
+  float: right;
+  margin-bottom: -100px;
+  margin-top: -50px;
+}
+
+#loginClick {
+  height: 50px;
+  width: 100px;
+  background-color: #399839;
+  font-size: 18px;
+  color: black;
+  margin-left: 10px;
+  float: right;
+}
+
+#loginOutClick {
+  height: 50px;
+  width: 100px;
+  background-color: #EE5F5B;
+  font-size: 18px;
+  color: black;
+  float: right;
+  margin-left: 10px;
+}
+
+#welcomeText {
+  float: left;
+  color: white;
+}
+
+#loginTitle {
+  color: #C8C8C8;
+}
+
+#createNewBook {
+  margin-left: 10px;
+  float: right;
+  background-color: #81898F;
+  color: black;
+}
+
+#createNewAuthor {
+  float: right;
+  color: black;
+}
+
+#newTitleAuthor {
+  color: #C8C8C8;
+}
+
+#newTitleBook {
+  color: #C8C8C8;
+}

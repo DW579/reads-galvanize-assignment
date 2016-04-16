@@ -1,0 +1,45 @@
+extends ../layout
+
+block content
+
+  div#header
+    a(href='/')
+      img(id='headerImg' src='../galvanize_logo.png')
+    h1#headerText Galvanize Reads
+    div#login
+      a(href="/login")
+        input#loginClick(type="button" value="Login")
+      if currentUser
+        p#welcomeText Hello #{currentUser}! Be wise in your selection...
+        a(href="/logout")
+          input#loginOutClick(type="button" value="Log Out")
+        a(href="/books/#{currentUser}/new")
+          input#createNewBook(type='button' value='Create New Book')
+        a(href="/authors/#{currentUser}/new")
+          input#createNewAuthor(type='button' value='Create New Author')
+
+  a(href='/books')
+    div#sidebarTop
+      img(id='sidebarTopImg' src='../books.jpg')
+      h1#sidebarTopText Books
+
+  div#authorsInfo
+    div#authorsPhotoBox
+      img(id='authorsPhoto' src= '#{theAuthor.url}')
+    div#authorsInfoBox
+      h1#authorsFirstName #{theAuthor.first_name} #{theAuthor.last_name}
+        div#removeButton
+          a(href='/authors/#{theAuthor.id}/#{currentUser}/delete')
+            h6 Remove
+        div#editButton
+          a(href='/authors/#{theAuthor.id}/#{currentUser}/edit')
+            h6 Edit
+      p#authorsBio #{theAuthor.bio}
+      h4#subTitleBooks Books
+      div#writtenBooks
+        h5#listedBooks #{theAuthor.books}
+
+  a(href='/authors')
+    div#sidebarBottom
+      img(id='sidebarBottomImg' src='../author.jpg')
+      h1#sidebarTopText Authors
